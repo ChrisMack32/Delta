@@ -8,7 +8,11 @@ Install Xcode 27.1 at `/Applications/Xcode.app`, including the iOS 27.1 simulato
 git clone --recurse-submodules https://github.com/ChrisMack32/Delta.git && cd Delta && ./scripts/prepare-iphone-duo.sh
 ```
 
-That downloads the emulator cores, applies the Xcode 27.1 build fixes, builds Delta, and installs it on the iPhone Duo simulator. Device Hub shows the app on the booted iPhone Duo. In Xcode, set the run destination to iPhone Duo. If Xcode asks for a signing team, choose your Personal Team. The simulator install from the script does not need a paid developer account.
+That downloads the emulator cores, builds Delta, and installs it on the iPhone Duo simulator. Device Hub shows the app on the booted iPhone Duo.
+
+The Xcode 27.1 project fixes for the Delta app are already in this repository. The script still patches the emulator cores after download. Those cores are separate git submodules, so their fixes are not stored in this repo’s commits.
+
+In Xcode, set the run destination to **iPhone Duo**. If Xcode asks for a signing team, choose your **Personal Team**. The simulator install from the script does not need a paid developer account.
 
 > Delta is an all-in-one classic video game emulator for non-jailbroken iOS devices. 
 
